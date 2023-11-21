@@ -48,6 +48,11 @@ img {
   padding: 0 15px;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 /* HEADER */
 
 .header-section {
@@ -145,6 +150,10 @@ img {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  url(../images/hero/people-office-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -184,11 +193,6 @@ img {
 
 /* BENEFITS SECTION */
 
-.section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -209,6 +213,14 @@ img {
 
 .benefits-item {
   width: calc((100% - 72px) / 4);
+}
+
+.container-for-benefits-icon {
+  padding: 24px 100px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #8E8F99;
+  background: #F4F4FD;
 }
 
 .benefits-title {
@@ -264,7 +276,31 @@ img {
 }
 
 .team-position-and-name {
-  padding: 32px 0 32px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 232px;
+  padding: 32px 0;
+}
+
+.container-for-socials-icons {
+  display: flex;
+  flex-shrink: 0;
+  gap: 24px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4D5AE5;
+}
+
+.socials-link:hover {
+  background-color: #404BBF;
 }
 
 .team-list-title {
@@ -274,6 +310,7 @@ img {
 
 .team-text {
   text-align: center;
+  margin-bottom: 8px;
 }
 
 /* PORTFOLIO-SECTION */
@@ -305,6 +342,11 @@ img {
 
 /* FOOTER */
 
+.footer-container {
+  display: flex;
+  gap: 120px;
+}
+
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -324,4 +366,19 @@ img {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.32px;
+}
+
+.socials-title {
+margin-bottom: 16px;
+color: #FFF;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5; 
+letter-spacing: 0.02;
+}
+
+.container-for-footer-social-icons {
+  display: flex;
+  gap: 16px;
 }
