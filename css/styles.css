@@ -57,6 +57,7 @@ img {
 
 .header-section {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -95,6 +96,11 @@ img {
   width: calc((100% - 40 * 2) / 3);
 }
 
+.nav-list-item:first-child .nav-link {
+  position: relative;
+  color: #404bbf;
+}
+
 .nav-link {
   display: flex;
   flex-direction: column;
@@ -111,7 +117,10 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link::after {
+.nav-list-item:first-child .nav-link::after {
+position: absolute;
+left: 0;
+bottom: -1px;
 content: "";
 width: 48px;
 height: 4px;
@@ -157,19 +166,21 @@ background-color: #404BBF;
 
 /* ========== HERO ========== */
 
-/* TRANSITION FOR ALL ELEMENTS THAT HAVE HOVER STATE */
-
 .hero,
 .footer {
   background-color: #2e2f42;
 }
 
 .hero {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
   url(../images/hero/people-office-1.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
@@ -234,6 +245,10 @@ background-color: #404BBF;
 }
 
 .container-for-benefits-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   padding: 24px 100px;
   margin-bottom: 8px;
   border-radius: 4px;
@@ -304,30 +319,34 @@ background-color: #404BBF;
 
 .social-icons-list {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
 .social-icons-item {
-  width: calc((100% - 72px)/4);
+  width: 40px;
+  height: 40px;
 }
 
 .socials-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #4D5AE5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus
+ {
   background-color: #404BBF;
 }
 
 .social-icon {
-fill: #F4F4FD;
+fill: #f4f4fd;
 }
 
 .team-list-title {
