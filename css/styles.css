@@ -388,6 +388,10 @@ img {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-item-title {
+  margin-bottom: 8px;
+}
+
 /* ====OVERLAY STYLES==== */
 .image-container {
   position: relative;
