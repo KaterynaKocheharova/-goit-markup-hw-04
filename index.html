@@ -465,10 +465,20 @@
             </li>
           </ul>
         </div>
+        <form action="" class="footer-form">
+          <h3 class="subscribe-title">Subscribe</h3>
+          <div class="form-container">
+          <input type="email" class="footer-input" placeholder="E-mail">
+          <button class="subscribe-button" type="submit">Subscribe<svg class="subscribe-button-icon" width="24" height="24"></svg></button>
+            <use href="./images/icons.svg#icon-subscribe-button"></use>
+          </svg>
+        </button>
+      </div>
+        </form>
       </div>
     </footer>
     <!-- ========== MODAL BOX ========== -->
-    <section class="backdrop is-open">
+    <section class="backdrop">
       <form action="" class="modal-box-form">
         <h2 class="form-title">
           Leave your contacts and we will call you back
@@ -495,10 +505,14 @@
         </svg>
       </label>
         <label class="label comment-label"
-          >Comment<textarea class="input comment-input" name="user_comment" placeholder="Text input"></textarea>
+          >Comment<textarea class="input comment-input" name="user_comment" rows="5" placeholder="Text input"></textarea>
         </label>
         <label class="label privacy-policy-label">
-          <input class="input privacy-policy-checkbox" type="checkbox" name="privacyPolicyCheckbox" />I accept the terms
+          <div class="checkbox-container"><input class="input privacy-policy-checkbox" type="checkbox" name="privacyPolicyCheckbox"/>
+          <svg class="click-icon" with="16" height="16">
+            <use href="./images/icons.svg#icon-click"></use>
+          </svg>
+        </div>I accept the terms
           and conditions of the <a class="privacy-policy-link" href="">Privacy Policy</a>
         </label>
         <button class="submit-button" type="submit">Send</button>

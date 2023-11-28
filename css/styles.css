@@ -456,6 +456,10 @@ img {
   letter-spacing: 0.32px;
 }
 
+.socials-container {
+  margin-right: 80px;
+}
+
 .socials-title {
   margin-bottom: 16px;
   color: #fff;
@@ -473,6 +477,60 @@ img {
 .socials-link-footer:hover,
 .socials-link-footer:focus {
   background-color: #31d0aa;
+}
+
+.subscribe-title {
+color: #FFF;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5; 
+letter-spacing: 0.02em;
+margin-bottom: 16px;
+}
+
+.footer-input {
+padding: 8px 16px;
+border-radius: 4px;
+border: 1px solid #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+background-color: transparent;
+}
+
+.footer-input::placeholder {
+color: #FFF;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.48px;
+}
+
+.subscribe-button {
+display: block;
+width: 165px;
+height: 40px;
+padding: 8px 24px;
+color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.04em;
+border-radius: 4px;
+border: none;
+background: #4D5AE5;
+}
+
+.subscribe-button-icon {
+  fill: #fff;
+}
+
+.form-container {
+  display: flex;
+  gap: 24px;
 }
 
 /* ========== MODAL BOX ========== */
@@ -499,6 +557,7 @@ img {
 }
 
 .modal-box-form {
+  display: none;
   position: fixed;
   z-index: 11;
   left: 50%;
@@ -540,9 +599,31 @@ img {
 }
 
 .input {
-  padding: 11px 16px;
+  padding: 11px 11px 11px 38px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: border 250ms linear;
+}
+
+.input:hover,
+.input:focus {
+border: 1px solid #4D5AE5;
+}
+
+.input:hover + .name-icon,
+.input:focus + .name-icon,
+.input:hover + .tel-icon,
+.input:focus + .tel-icon,
+.input:hover + .email-icon,
+.input:focus + .email-icon {
+  fill: blue;
+}
+
+.comment-input {
+  height: 120px;
+  padding-top: 8px;
+  padding-left: 16px;
+  resize: none;
 }
 
 .comment-input::placeholder {
@@ -592,6 +673,27 @@ img {
   letter-spacing: 0.04em;
 }
 
+.checkbox-container {
+  display: relative;
+  overflow: hidden;
+  width: 16px;
+  height: 16px;
+}
+
+.click-icon {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+transform: translateY(100%);
+transition: translateY 250ms linear; 
+}
+
+.privacy-policy-checkbox:checked .click-icon {
+  transition: translateY(0);
+}
+
 /* =========== ABSOLUTELY POSITIONED ELEMENTS =========== */
 
 .close-button {
@@ -608,6 +710,12 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.10);
 }
 
+.close-button:hover .close-icon,
+.close-button:focus .close-icon {
+  fill: #404BBF;
+  stroke: #FFFFFF;
+}
+
 .name-label {
   position: relative;
 }
@@ -616,6 +724,8 @@ img {
   position: absolute;
   top: 29px;
   left: 16px;
+  fill: #2E2F42;
+  transition: fill 250ms linear;
 }
 
 .tel-label {
@@ -623,9 +733,11 @@ img {
 }
 
 .tel-icon {
-  position: relative;
-  top: 29px;
+  position: absolute;
+  top: 26px;
   left: 16px;
+  fill: #2E2F42;
+  transition: fill 250ms linear;
 }
 
 .email-label {
@@ -636,4 +748,6 @@ img {
   position: absolute;
   top: 26px;
   left: 16px;
+  fill: #2E2F42;
+  transition: fill 250ms linear;
 }
